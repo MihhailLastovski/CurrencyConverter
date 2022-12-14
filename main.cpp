@@ -38,5 +38,6 @@ int main()
   cout << "The converted amount is: " << convertedAmount << endl;
 
   cin.get();
+  cin.get();
   return 0;
 }
