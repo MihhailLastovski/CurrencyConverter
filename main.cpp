@@ -10,7 +10,7 @@ double convert(double amount, double exchangeRate)
 int main()
 {
   string currencies[] = {"USD", "EUR", "GBP", "AUD"};
-  double exchangeRates[] = {1.0, 1.06, 1.24, 1.46};
+  double exchangeRates[] = {1.0, 0.94, 0.8, 1.45};
   int toCurrencyChoice;
   int fromCurrencyChoice;
 
@@ -32,8 +32,8 @@ int main()
   cout << "Please enter the amount to convert: ";
   cin >> amount;
 
-  double exchangeRate = exchangeRates[fromCurrencyChoice - 1] / exchangeRates[toCurrencyChoice - 1];
-  double convertedAmount = convert(amount, exchangeRate);
+  double toDollar = amount / exchangeRates[fromCurrencyChoice - 1];
+  double convertedAmount = convert(toDollar, exchangeRates[toCurrencyChoice - 1]);
 
   cout << "The converted amount is: " << convertedAmount << endl;
 
